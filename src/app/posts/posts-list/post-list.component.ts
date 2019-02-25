@@ -9,8 +9,12 @@ import { PostService } from '../post.service';
 })
 export class PostListComponent implements OnInit{
   posts: Post[];
+  modalActive = false;
+  modalImage = "";
 
-  constructor(private postService: PostService){}
+  constructor(
+    private postService: PostService
+  ){}
 
   ngOnInit() {
     this.postService.getPosts().subscribe(posts => {
@@ -21,7 +25,16 @@ export class PostListComponent implements OnInit{
         return post;
       });
     });
+
+    this.postService.getModalPreviewListener().subscribe(
+      url => {
+        this.modalImage = url;
+        this.modalActive = true;
+      }
+    );
   }
+
+
 
   timeDelta(now: Date,post: Post){
     let milliDiff = now.getTime() - new Date(post.date).getTime();

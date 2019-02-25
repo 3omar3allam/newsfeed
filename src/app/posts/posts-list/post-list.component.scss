@@ -1,5 +1,58 @@
 post{
   display: block;
-  width: 70%;
+  width: 60%;
   margin: 5px auto;
+  @media only screen and (max-width: 667px){
+    width: 100%;
+  }
+}
+
+.modal{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.85);
+  transition: transform 0.2s;
+  &.modalDisabled{
+    transform: scale(0);
+  }
+  &.modalEnabled{
+    transition: scale(1);
+  }
+  .close{
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    height: 5rem;
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    transition: color 0.2s;
+    cursor: pointer;
+    &:hover{
+      color: rgb(150, 150, 150);
+    }
+  }
+  .modal-image{
+    display: block;
+    max-width: 85vw;
+    max-height: 85vw;
+    margin: auto;
+  }
+  @media only screen and (max-width: 667px){
+    background-color: black;
+    .close{
+      display: none;
+    }
+    .modal-image{
+      max-width: 100%;
+      margin: 0;
+    }
+  }
 }

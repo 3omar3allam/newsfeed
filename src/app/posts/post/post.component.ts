@@ -1,5 +1,6 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges, EventEmitter, Output } from '@angular/core';
 import { Post } from '../post.model';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'post',
@@ -9,6 +10,7 @@ import { Post } from '../post.model';
 export class PostComponent implements OnChanges{
   @Input() post: Post;
 
+  constructor(private postService: PostService){}
   ngOnChanges(){
     this.post.liked = false;
   }
@@ -17,5 +19,9 @@ export class PostComponent implements OnChanges{
     this.post.liked = !this.post.liked;
     if(this.post.liked) this.post.likes ++;
     else this.post.likes --;
+  }
+
+  showImage(){
+    this.postService.modalPreview(this.post.content);
   }
 }

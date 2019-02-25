@@ -1,24 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Post } from './post.model';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PostService{
-  private posts: Post[];
+  private modalPreviewListener = new Subject<string>();
 
-  constructor(private http: HttpClient){
-    this.posts = new Array<Post>();
-  }
+  constructor(private http: HttpClient){}
 
   public getPosts(){
     return this.http.get('assets/posts.json');
   }
 
-  public createPost(post: Post): void{
-
+  public modalPreview(url: string){
+    this.modalPreviewListener.next(url);
+  }
+  
+  public getModalPreviewListener(): Observable<string>{
+    return this.modalPreviewListener.asObservable();
   }
 }

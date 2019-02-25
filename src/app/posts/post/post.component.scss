@@ -1,13 +1,36 @@
 mat-card{
-  .post-avatar{
-    background-size: cover;
+  .mat-card-header{
+    & * {
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .post-avatar{
+      background-size: cover;
+    }
+    .mat-card-title{
+      color: blue;
+    }
   }
   .mat-card-content{
     padding: 10px;
-    .mat-card-image{
-      height: 20rem;
-      width: 100%;
-      background-size: cover;
+    max-width: 100%;
+    .mat-card-image, .post-video{
+      display: block;
+      margin: auto;
+      width: 90%;
+      max-height: 60vh;
+    }
+    .post-video{
+      height: 60vh;
+    }
+    @media only screen and (max-width: 667px){
+      padding: 0;
+      .mat-card-image, .post-video{
+        width: 100%;
+        max-height: 90vh;
+      }
     }
   }
 }

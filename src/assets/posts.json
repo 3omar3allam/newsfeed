@@ -19,8 +19,7 @@
         },
         "text": "Est fugiat eiusmod eiusmod ea qui do nisi."
       }
-    ],
-    "edited": true
+    ]
   },
   {
     "_id": "5c7332aa95bc91f0f9e695e4",
@@ -33,8 +32,7 @@
     "type": "text",
     "content": "Reprehenderit nulla ullamco est aute do nostrud est. Cupidatat mollit reprehenderit do qui labore amet tempor. Id quis irure minim velit nostrud Lorem aliqua est do sint adipisicing ad. In eiusmod do commodo aliqua deserunt incididunt sit do.",
     "likes": 49,
-    "comments": [],
-    "edited": true
+    "comments": []
   },
   {
     "_id": "5c7332aa97387516a623385e",
@@ -47,8 +45,7 @@
     "type": "video",
     "content": "https://www.youtube.com/embed/q3Dt6kI-ajA?autoplay=1",
     "likes": 61,
-    "comments": [],
-    "edited": true
+    "comments": []
   },
   {
     "_id": "5c7332aa9043f6d02ae73dd0",
@@ -78,8 +75,7 @@
         },
         "text": "Proident amet consectetur consectetur sunt quis Lorem ullamco sunt pariatur eu consectetur proident deserunt eu."
       }
-    ],
-    "edited": true
+    ]
   },
   {
     "_id": "5c7332aa083029d62a58982d",
@@ -109,8 +105,7 @@
         },
         "text": "Elit id mollit commodo anim consectetur."
       }
-    ],
-    "edited": false
+    ]
   },
   {
     "_id": "5c7332aaa981af7b11abfb59",
@@ -121,10 +116,9 @@
     },
     "date": "Mon Feb 25 2019 02:11:22 GMT+0200 (Eastern European Standard Time)",
     "type": "image",
-    "content": "http://placehold.it/400x200",
+    "content": "https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/52883821_2423774427685316_4803359572645380096_n.jpg?_nc_cat=1&_nc_ht=scontent-hbe1-1.xx&oh=f1399993f052857d7eac703e4178ead1&oe=5CE04A2F",
     "likes": 24,
-    "comments": [],
-    "edited": true
+    "comments": []
   },
   {
     "_id": "5c7332aa4c444d63e98cb119",
@@ -137,8 +131,7 @@
     "type": "image",
     "content": "http://placehold.it/600x600",
     "likes": 66,
-    "comments": [],
-    "edited": true
+    "comments": []
   },
   {
     "_id": "5c7332aa11a25ebc70eb5cf9",
@@ -168,8 +161,7 @@
         },
         "text": "Commodo sunt voluptate aliqua pariatur excepteur in ipsum fugiat qui cupidatat duis."
       }
-    ],
-    "edited": false
+    ]
   },
   {
     "_id": "5c7332aadf25a26d43162a71",
@@ -182,8 +174,7 @@
     "type": "video",
     "content": "https://www.youtube.com/embed/q3Dt6kI-ajA?autoplay=1",
     "likes": 63,
-    "comments": [],
-    "edited": true
+    "comments": []
   },
   {
     "_id": "5c7332aa92d5745af1eda403",
@@ -196,7 +187,6 @@
     "type": "text",
     "content": "Eiusmod culpa cillum dolor ad qui laborum est elit ea elit est excepteur ea. Non excepteur quis ullamco mollit eiusmod anim exercitation. Laborum sunt ad cillum amet est officia quis et do est et. Sit laboris sunt aliqua anim adipisicing eiusmod sint reprehenderit sint.",
     "likes": 71,
-    "comments": [],
-    "edited": true
+    "comments": []
   }
 ]
