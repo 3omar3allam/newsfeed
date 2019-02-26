@@ -5,4 +5,4 @@
 ## Assumptions:
 * Posts can be either text or image or video and cannot have mixed contents.
 * Since the format of [posts.json](src/assets/posts.json) was not given, I assumed a format as if that's the way it's stored in database.
-* Photos and videos are external links (videos are iframes).
+* Photos and videos sources are external (videos are iframes).
