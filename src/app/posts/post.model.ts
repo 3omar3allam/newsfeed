@@ -16,7 +16,6 @@ export class Post {
       text: string;
     }
   ];
-  edited: boolean;
   dateDiff: string;
   showContent: string;
   liked: boolean;

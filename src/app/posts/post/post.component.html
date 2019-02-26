@@ -11,10 +11,12 @@
       [ngStyle]="{'content':'url('+post.content+')'}"
     >
     </div>
-    <p *ngIf="post.type == 'text'">{{post.showContent}}</p>
+    <p *ngIf="post.type == 'text'" [innerHTML]="post.showContent"></p>
   </mat-card-content>
   <mat-divider></mat-divider>
   <mat-card-actions>
-    <button mat-button [color]="post.liked? 'primary':null" (click)="like()"><i class="far fa-thumbs-up"></i> {{post.likes}}</button>
+    <button mat-button [color]="post.liked? 'primary':null" (click)="like()">
+      <i class="far fa-thumbs-up"></i> {{post.likes}}
+    </button>
   </mat-card-actions>
 </mat-card>

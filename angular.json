@@ -36,7 +36,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "baseHref": "https://3omar3allam.github.io/newsfeed/",
             "outputPath": "dist/newsfeed",
             "index": "src/index.html",
             "main": "src/main.ts",
