@@ -8,9 +8,6 @@ mat-card{
         text-decoration: underline;
       }
     }
-    .post-avatar{
-      // background-size: cover;
-    }
     .mat-card-title{
       color: rgb(40, 71, 204);
       font-weight: 600;
@@ -24,6 +21,7 @@ mat-card{
       margin: auto;
       width: 90%;
       max-height: 60vh;
+      cursor: pointer;
     }
     .post-video{
       height: 60vh;
