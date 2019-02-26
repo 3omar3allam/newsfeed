@@ -20,9 +20,11 @@
     .comment-name{
       color: $fb-blue;
       font-weight: 600;
-      cursor: pointer;
-      &:hover{
-        text-decoration: underline;
+      :first-child{
+        cursor: pointer;
+        &:hover{
+          text-decoration: underline;
+        }
       }
     }
   }

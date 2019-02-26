@@ -17,7 +17,7 @@
     <p class='likes' *ngIf='post.likes'>
       <i class="fas fa-thumbs-up"></i> {{post.likes}}
     </p>
-    <p class='comments' *ngIf='post.comments.length' (click)="showComments = !showComments">{{post.comments.length}} Comments</p>
+    <p class='comments' *ngIf='post.comments.length' (click)="showComments = !showComments">{{post.comments.length}} Comment{{post.comments.length>1? 's':''}}</p>
   </div>
   <mat-divider></mat-divider>
   <mat-card-actions>
