@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, EventEmitter, Output } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { Post } from '../post.model';
 import { PostService } from '../post.service';
 
@@ -9,6 +9,7 @@ import { PostService } from '../post.service';
 })
 export class PostComponent implements OnChanges{
   @Input() post: Post;
+  showComments = false;
 
   constructor(private postService: PostService){}
   ngOnChanges(){

@@ -13,9 +13,12 @@
     </div>
     <p *ngIf="post.type == 'text'" [innerHTML]="post.showContent"></p>
   </mat-card-content>
-  <p class='likes'>
-    <i class="fas fa-thumbs-up"></i> {{post.likes}}
-  </p>
+  <div class="post-info">
+    <p class='likes' *ngIf='post.likes'>
+      <i class="fas fa-thumbs-up"></i> {{post.likes}}
+    </p>
+    <p class='comments' *ngIf='post.comments.length' (click)="showComments = !showComments">{{post.comments.length}} Comments</p>
+  </div>
   <mat-divider></mat-divider>
   <mat-card-actions>
     <button mat-button
@@ -24,11 +27,17 @@
     >
       <i class="far fa-thumbs-up"></i> <span class="button-text">LIKE</span>
     </button>
-    <button mat-button>
+    <button mat-button (click)="showComments = !showComments">
       <i class="far fa-comment-alt"></i> <span class="button-text">COMMENT</span>
     </button>
     <button mat-button>
       <i class="share"></i> <span class="button-text">SHARE</span>
     </button>
   </mat-card-actions>
+  <mat-accordion *ngIf='post.comments && post.comments.length'>
+    <mat-divider *ngIf='showComments'></mat-divider>
+    <mat-expansion-panel class='mat-elevation-z0' [expanded]='showComments'>
+      <comment *ngFor='let comment of post.comments' [comment]='comment'></comment>
+    </mat-expansion-panel>
+  </mat-accordion>
 </mat-card>

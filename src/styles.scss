@@ -1,5 +1,6 @@
 @import '~@angular/material/theming';
 @import url('//fonts.googleapis.com/icon?family=Material+Icons');
+@import 'styleVariables';
 
 @include mat-core();
 
@@ -9,7 +10,6 @@ $warn:    mat-palette($mat-red, 500);
 
 $config: mat-typography-config();
 
-
 $theme: mat-light-theme($primary, $accent, $warn);
 
 @include angular-material-theme($theme);
@@ -17,6 +17,6 @@ $theme: mat-light-theme($primary, $accent, $warn);
 body {
   font-family: mat-font-family($config);
   font-weight: normal;
-  background: rgb(220, 220, 220);
+  background: $main-bg-color;
   margin: 0;
 }
