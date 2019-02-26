@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './common/header/header.component';
 import { PostListComponent } from './posts/posts-list/post-list.component';
 import { SafePipe } from './common/safe.pipe';
+import { CommentComponent } from './posts/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SafePipe } from './common/safe.pipe';
     HeaderComponent,
     PostListComponent,
     PostComponent,
+    CommentComponent,
     SafePipe,
   ],
   imports: [

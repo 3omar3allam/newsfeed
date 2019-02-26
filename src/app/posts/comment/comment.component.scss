@@ -1,0 +1,31 @@
+@import 'styleVariables';
+
+.comment{
+  margin: 10px -5px;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  .comment-image{
+    height: 30px;
+    border-radius: 15px;
+    border-width: 2px;
+    border-color: $text-dark-grey;
+    cursor: pointer;
+  }
+  .comment-body{
+    margin-left: 1rem;
+    padding: 8px;
+    background: $light-bg-color;
+    border-radius: 10px;
+    .comment-name{
+      color: $fb-blue;
+      font-weight: 600;
+      :first-child{
+        cursor: pointer;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

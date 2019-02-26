@@ -1,3 +1,5 @@
+@import 'styleVariables';
+
 post{
   display: block;
   width: 60%;
@@ -17,7 +19,7 @@ post{
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0,0,0,0.85);
+  background-color: $modal-bg-color;
   transition: transform 0.2s;
   &.modalDisabled{
     transform: scale(0);
@@ -36,7 +38,7 @@ post{
     transition: color 0.2s;
     cursor: pointer;
     &:hover{
-      color: rgb(150, 150, 150);
+      color: $dark-bg-color;
     }
   }
   .modal-image{
