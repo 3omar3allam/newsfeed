@@ -324,14 +324,14 @@ THE SOFTWARE.
 
 @angular/material/toolbar
 
+@angular/material/divider
+
 @angular/animations
 MIT
 
 @angular/material/expansion
 
 @angular/material/card
-
-@angular/material/divider
 
 @angular/material/button
 
