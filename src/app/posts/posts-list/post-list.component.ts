@@ -106,7 +106,7 @@ export class PostListComponent implements OnInit{
         let urlComponents = urlRegex.exec(link);
         urlRegex.lastIndex = 0;
         let protocol = "";
-        if(!urlComponents[groups.protocol] && !urlComponents[groups.www]){
+        if(!urlComponents[groups.protocol]){
           protocol = "http://";
         }
         post.showContent = post.showContent.replace(
