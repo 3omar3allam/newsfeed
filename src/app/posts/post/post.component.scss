@@ -1,3 +1,5 @@
+$share-btn: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNHB0IiBoZWlnaHQ9IjE0cHQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgdmVyc2lvbj0iMS4xIj48ZyBpZD0ic3VyZmFjZTEiPjxwYXRoIHN0eWxlPSIgc3Ryb2tlOm5vbmU7ZmlsbC1ydWxlOm5vbnplcm87ZmlsbDpyZ2IoMzkuMjE1Njg2JSwzOS4yMTU2ODYlLDM5LjIxNTY4NiUpO2ZpbGwtb3BhY2l0eToxOyIgZD0iTSAxMy45OTYwOTQgNi45OTYwOTQgTCA3LjYxMzI4MSAwIEwgNy42MTMyODEgNC4xOTE0MDYgTCA2Ljg3NSA0LjE5MTQwNiBDIDUuMDM5MDYyIDQuMTkxNDA2IDMuMzEyNSA0LjkwNjI1IDIuMDExNzE5IDYuMjAzMTI1IEMgMC43MTQ4NDQgNy41MDM5MDYgMCA5LjIzMDQ2OSAwIDExLjA2NjQwNiBMIDAgMTQgTCAxLjIyMjY1NiAxMi42NjAxNTYgQyAyLjg2MzI4MSAxMC44NjMyODEgNS4xODc1IDkuODI0MjE5IDcuNjEzMjgxIDkuODAwNzgxIEwgNy42MTMyODEgMTMuOTkyMTg4IFogTSAwLjgyMDMxMiAxMS44OTA2MjUgTCAwLjgyMDMxMiAxMS4wNjY0MDYgQyAwLjgyMDMxMiA5LjQ0OTIxOSAxLjQ0OTIxOSA3LjkyNTc4MSAyLjU5Mzc1IDYuNzg1MTU2IEMgMy43MzgyODEgNS42NDA2MjUgNS4yNTc4MTIgNS4wMTE3MTkgNi44NzUgNS4wMTE3MTkgTCA4LjQzMzU5NCA1LjAxMTcxOSBMIDguNDMzNTk0IDIuMTE3MTg4IEwgMTIuODg2NzE5IDYuOTk2MDk0IEwgOC40MzM1OTQgMTEuODc1IEwgOC40MzM1OTQgOC45ODA0NjkgTCA3LjY5OTIxOSA4Ljk4MDQ2OSBDIDUuMTA5Mzc1IDguOTgwNDY5IDIuNjIxMDk0IDEwLjAzOTA2MiAwLjgyMDMxMiAxMS44OTA2MjUgWiBNIDAuODIwMzEyIDExLjg5MDYyNSAiLz48L2c+PC9zdmc+';
+
 mat-card{
   .mat-card-header{
     & * {
@@ -7,10 +9,11 @@ mat-card{
       }
     }
     .post-avatar{
-      background-size: cover;
+      // background-size: cover;
     }
     .mat-card-title{
-      color: blue;
+      color: rgb(40, 71, 204);
+      font-weight: 600;
     }
   }
   .mat-card-content{
@@ -30,6 +33,38 @@ mat-card{
       .mat-card-image, .post-video{
         width: 100%;
         max-height: 90vh;
+      }
+    }
+  }
+  .likes{
+    font-size: 0.8em;
+    margin-bottom: 1em;
+    .fa-thumbs-up{
+      padding: 2.5px;
+      background-color: rgb(44, 127, 224);
+      color: white;
+      border-radius: 10px;
+      font-size: 0.8em;
+    }
+  }
+  .mat-card-actions{
+    display: flex;
+    * {
+      flex: auto;
+      color: rgb(100, 100, 100);
+      &.button-text{
+        margin-left: 0.4rem;
+        font-weight: 800;
+      }
+      .share{
+        content: url($share-btn);
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+    .active{
+      * {
+        color: rgb(40, 71, 204);
       }
     }
   }
