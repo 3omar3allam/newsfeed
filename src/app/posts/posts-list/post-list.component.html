@@ -1,5 +1,2 @@
-<div class="modal" (click)="modalActive = false" [ngClass]="modalActive? 'modalEnabled': 'modalDisabled'">
-  <span class="close">&times;</span>
-  <img class="modal-image" (click)="$event.stopPropagation()" [src]="modalImage">
-</div>
+<app-modal></app-modal>
 <post *ngFor='let post of posts' [post]='post'></post>

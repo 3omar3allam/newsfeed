@@ -1,0 +1,51 @@
+@import 'styleVariables';
+
+.modal{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $modal-bg-color;
+  transition: transform 0.2s;
+  &.modalDisabled{
+    transform: scale(0);
+  }
+  &.modalEnabled{
+    transform: scale(1);
+  }
+  .close{
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    height: 5rem;
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    transition: color 0.2s;
+    cursor: pointer;
+    &:hover{
+      color: $dark-bg-color;
+    }
+  }
+  .modal-image{
+    display: block;
+    max-width: 85vw;
+    max-height: 85vw;
+    margin: auto;
+  }
+  @media only screen and (max-width: 667px){
+    background-color: black;
+    .close{
+      display: none;
+    }
+    .modal-image{
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+}

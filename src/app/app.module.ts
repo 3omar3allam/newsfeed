@@ -11,6 +11,7 @@ import { HeaderComponent } from './common/header/header.component';
 import { PostListComponent } from './posts/posts-list/post-list.component';
 import { SafePipe } from './common/safe.pipe';
 import { CommentComponent } from './posts/comment/comment.component';
+import {ModalComponent} from './posts/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CommentComponent } from './posts/comment/comment.component';
     PostListComponent,
     PostComponent,
     CommentComponent,
+    ModalComponent,
     SafePipe,
   ],
   imports: [

@@ -1,0 +1,4 @@
+<div class="modal" (click)="modalActive = false" [ngClass]="modalActive? 'modalEnabled': 'modalDisabled'">
+  <span class="close">&times;</span>
+  <img class="modal-image" (click)="$event.stopPropagation()" [src]="modalImage" alt="">
+</div>

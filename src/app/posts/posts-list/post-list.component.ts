@@ -9,8 +9,6 @@ import { PostService } from '../post.service';
 })
 export class PostListComponent implements OnInit{
   posts: Post[];
-  modalActive = false;
-  modalImage = "";
 
   constructor(
     private postService: PostService
@@ -26,12 +24,6 @@ export class PostListComponent implements OnInit{
       });
     });
 
-    this.postService.getModalPreviewListener().subscribe(
-      url => {
-        this.modalImage = url;
-        this.modalActive = true;
-      }
-    );
   }
 
 
