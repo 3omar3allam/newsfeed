@@ -1,28 +1,31 @@
-import { Component, Input, OnChanges } from '@angular/core';
-import { Post } from '../post.model';
-import { PostService } from '../post.service';
+import {Component, Input, OnChanges} from '@angular/core';
+import {Post} from '../post.model';
 
 @Component({
   selector: 'post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss'],
+  styleUrls: ['./post.component.scss']
 })
-export class PostComponent implements OnChanges{
+export class PostComponent implements OnChanges {
+
   @Input() post: Post;
   showComments = false;
 
-  constructor(private postService: PostService){}
-  ngOnChanges(){
+  constructor() { }
+
+  ngOnChanges() {
     this.post.liked = false;
+    Post.timeDelta(this.post, new Date());
+    Post.urlify(this.post);
   }
 
-  like(){
+  onToggleComments(show: boolean) {
+    this.showComments = show;
+  }
+
+  onLikePost() {
     this.post.liked = !this.post.liked;
     if(this.post.liked) this.post.likes ++;
     else this.post.likes --;
-  }
-
-  showImage(){
-    this.postService.modalPreview(this.post.content);
   }
 }

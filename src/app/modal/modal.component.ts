@@ -1,20 +1,19 @@
-import {Component, OnInit} from '@angular/core';
-import {PostService} from '../post.service';
-
+import { Component, OnInit } from '@angular/core';
+import {PostService} from '../posts/post.service';
 
 @Component({
-  selector: 'app-modal',
+  selector: 'modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss'],
+  styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
 
   modalActive = false;
-  modalImage = "";
+  modalImage = '';
 
-  constructor(private postService: PostService) {}
+  constructor(private postService: PostService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.postService.getModalPreviewListener().subscribe(
       url => {
         this.modalImage = url;
@@ -22,7 +21,7 @@ export class ModalComponent implements OnInit {
       }
     );
 
-    let lastY;
+    let lastY: number;
     document.ontouchmove = (ev) => {
       if(this.modalActive){
         let currentY = ev.touches[0].clientY;
@@ -31,6 +30,6 @@ export class ModalComponent implements OnInit {
         }
         lastY = currentY;
       }
-    }
+    };
   }
 }

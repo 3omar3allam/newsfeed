@@ -1,0 +1,7 @@
+<div
+  *ngIf="link"
+  class="post-image"
+  mat-card-image (click)='showImage()'
+  [ngStyle]="{'content':'url('+link+')'}"
+>
+</div>

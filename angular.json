@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "newsfeed": {
+    "newsfeed-again": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss",
@@ -36,7 +36,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/newsfeed",
+            "outputPath": "dist/newsfeed-again",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -48,12 +48,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
             "stylePreprocessorOptions": {
               "includePaths":[
                 "src/styles"
               ]
-            }
+            },
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -85,18 +85,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "newsfeed:build"
+            "browserTarget": "newsfeed-again:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "newsfeed:build:production"
+              "browserTarget": "newsfeed-again:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "newsfeed:build"
+            "browserTarget": "newsfeed-again:build"
           }
         },
         "test": {
@@ -130,7 +130,7 @@
         }
       }
     },
-    "newsfeed-e2e": {
+    "newsfeed-again-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -139,11 +139,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "newsfeed:serve"
+            "devServerTarget": "newsfeed-again:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "newsfeed:serve:production"
+              "devServerTarget": "newsfeed-again:serve:production"
             }
           }
         },
@@ -159,5 +159,5 @@
       }
     }
   },
-  "defaultProject": "newsfeed"
+  "defaultProject": "newsfeed-again"
 }

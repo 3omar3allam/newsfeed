@@ -1,0 +1,14 @@
+<mat-card-actions>
+  <button mat-button
+          (click)="like()"
+          [ngClass]="liked? 'active':''"
+  >
+    <i class="far fa-thumbs-up"></i> <span class="button-text">LIKE</span>
+  </button>
+  <button mat-button (click)="showComments()">
+    <i class="far fa-comment-alt"></i> <span class="button-text">COMMENT</span>
+  </button>
+  <button mat-button>
+    <i class="share"></i> <span class="button-text">SHARE</span>
+  </button>
+</mat-card-actions>

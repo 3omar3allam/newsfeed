@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { User } from '../post.model';
+import { User } from '../../post.model';
 
 @Component({
   selector: 'comment',

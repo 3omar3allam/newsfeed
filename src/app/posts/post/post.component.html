@@ -5,39 +5,25 @@
     <mat-card-subtitle>{{post.dateDiff}}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <iframe *ngIf="post.type == 'video'" class="post-video" [src]="post.content | safe"></iframe>
-    <div *ngIf="post.type == 'image'"
-      mat-card-image (click)='showImage()'
-      [ngStyle]="{'content':'url('+post.content+')'}"
-    >
+    <p [innerHTML]="post.showContent"></p>
+    <div class="post-media" *ngIf="post.media && post.media.type">
+      <post-image *ngIf="post.media.type === 'image'" [link]="post.media.link"></post-image>
+      <post-video *ngIf="post.media.type === 'video'" [link]="post.media.link"></post-video>
     </div>
-    <p *ngIf="post.type == 'text'" [innerHTML]="post.showContent"></p>
   </mat-card-content>
   <div class="post-info">
     <p class='likes' *ngIf='post.likes'>
-      <i class="fas fa-thumbs-up"></i> {{post.likes}}
+      <i class="fas fa-thumbs-up like-icon"></i> {{post.likes}}
     </p>
-    <p class='comments' *ngIf='post.comments.length' (click)="showComments = !showComments">{{post.comments.length}} Comment{{post.comments.length>1? 's':''}}</p>
+    <p class='comments' *ngIf='post.comments && post.comments.length' (click)="showComments = !showComments">{{post.comments.length}} Comment{{post.comments.length>1? 's':''}}</p>
   </div>
   <mat-divider></mat-divider>
-  <mat-card-actions>
-    <button mat-button
-      (click)="like()"
-      [ngClass]="post.liked? 'active':''"
-    >
-      <i class="far fa-thumbs-up"></i> <span class="button-text">LIKE</span>
-    </button>
-    <button mat-button (click)="showComments = !showComments">
-      <i class="far fa-comment-alt"></i> <span class="button-text">COMMENT</span>
-    </button>
-    <button mat-button>
-      <i class="share"></i> <span class="button-text">SHARE</span>
-    </button>
-  </mat-card-actions>
+  <post-buttons (toggleComments)="onToggleComments($event)" (likePost)="onLikePost()"></post-buttons>
   <mat-accordion *ngIf='post.comments && post.comments.length'>
-    <mat-divider *ngIf='showComments'></mat-divider>
+    <mat-divider *ngIf="showComments"></mat-divider>
     <mat-expansion-panel class='mat-elevation-z0' [expanded]='showComments'>
       <comment *ngFor='let comment of post.comments' [comment]='comment'></comment>
     </mat-expansion-panel>
   </mat-accordion>
+
 </mat-card>
