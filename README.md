@@ -3,6 +3,7 @@
 **running on [github pages](https://3omar3allam.github.io/newsfeed).**
 
 ## What's new?
+* Posts can have mixed types.
 * Each part is in a separate component for encapsulation and maintainability.
 * Lazy-loading videos when click to reduce data usage and avoid memory leaks.
 
